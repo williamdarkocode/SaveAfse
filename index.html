@@ -1,0 +1,206 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>
+      ServeAFSE
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css"/>
+    
+    <link href="https://fonts.googleapis.com/css?family=Saira+Condensed" rel="stylesheet">
+
+    
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+    
+   
+  </head>
+
+  <body>
+    <!-- <div class="container-fluid"> -->
+
+    <video playsinline autoplay muted loop id="backgroundVid">
+        <source src="media/actualBackgroundVideoSlomo.mp4" type="video/mp4">
+    </video>
+
+    <div class="typewriter" id="welcomeText">
+      <h1>Welcome to ServeAFSE.</h1>
+    </div>
+
+    <div id="typedText">
+     
+    </div>
+
+    <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    </div> -->
+
+    <div id="firebaseui-auth-container" class="signUpOptions"></div>
+   </div>
+
+   <div id="itemsDivHolder">
+        <!-- <div class="items" id="binLids"></div>
+        <div class="items" id="markerHolders"></div>
+        <div class="items" id="restroomPasses"></div>
+        <div class="items" id="socketCovers"></div>
+        <div class="items" id="deskOrnaments"></div>
+        <div class="items" id="magneticBoardRuler"></div> -->
+
+        <div class="card items" style="width: 39.7%;" id="binLids" data-toggle="" data-target="">
+          <!-- <img class="card-img-top" src="..." alt="Bin Lids"> -->
+          <div class="card-block">
+            <h4 class="card-title">Bin Lids</h4>
+            <p class="card-text">Laser-Cut cardboard Bin Lids to for your classrooms. Paper, Plastics, Trash.</p>
+            <a href="#" class="btn btn-primary" onclick="checkIfLoggedIn()">View/Order Item.</a>
+          </div>
+        </div>
+
+        <div class="card items" style="width: 39.7%; display: inline-block;" id="markerHolders" data-toggle="" data-target="">
+          <!-- <img class="card-img-top" src="..." alt="Marker Holder"> -->
+          <div class="card-block">
+            <h4 class="card-title">Marker Holders</h4>
+            <p class="card-text">3D printed, white board marker holder. Also, with slot for holding board eraser.</p>
+            <a href="#" class="btn btn-primary" onclick="checkIfLoggedIn()">View/Order Item.</a>
+          </div>
+        </div>
+
+
+        <div class="card items" style="width: 39.7%;" id="restroomPasses" data-toggle="" data-target="">
+          <!-- <img class="card-img-top" src="..." alt="Restroom Passes"> -->
+          <div class="card-block">
+            <h4 class="card-title">Restroom Passes</h4>
+            <p class="card-text">Restroom Passes customised with teacher name & classroom number & indent for post-it notes.</p>
+            <a href="#" class="btn btn-primary" onclick="checkIfLoggedIn()">View/Order Item.</a>
+          </div>
+        </div>
+
+
+        <div class="card items" style="width: 39.7%;" id="socketCovers" data-toggle="" data-target="">
+          <!-- <img class="card-img-top" src="..." alt="Socket Covers"> -->
+          <div class="card-block">
+            <h4 class="card-title">Socket Covers</h4>
+            <p class="card-text">3D printed covers for exposed electrical sockets in classrooms. Danger!</p>
+            <a href="#" class="btn btn-primary" onclick="checkIfLoggedIn()">View/Order Item.</a>
+          </div>
+        </div>
+
+        <div class="card items" style="width: 39.7%;" id="deskOrnaments" data-toggle="" data-target="">
+          <!-- <img class="card-img-top" src="..." alt="Desk Ornaments"> -->
+          <div class="card-block">
+            <h4 class="card-title">Desk Ornaments</h4>
+            <p class="card-text">3D printed or hand crafted, cute little ornamnets of your desk. Make your work space chill.</p>
+            <a href="#" class="btn btn-primary" onclick="checkIfLoggedIn()">View/Order Item.</a>
+          </div>
+        </div>
+
+        <div class="card items" style="width: 39.7%;" id="magneticBoardRuler" data-toggle="" data-target="">
+          <!-- <img class="card-img-top" src="..." alt="Magnetic Board Ruler"> -->
+          <div class="card-block">
+            <h4 class="card-title">Magnetic White Board Ruler</h4>
+            <p class="card-text">Ruler that sticks to the board. No more holding rulers stable.</p>
+            <a href="#" class="btn btn-primary" onclick="checkIfLoggedIn()">View/Order Item.</a>
+          </div>
+        </div>
+
+   </div>
+
+
+   <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <!-- <h4 class="modal-title">Modal Header</h4> -->
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <!-- </div> -->
+  </body>
+
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-messaging.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCwn6FThBM2wS2pCrWBDVPhCddEa257454",
+    authDomain: "serveafse.firebaseapp.com",
+    databaseURL: "https://serveafse.firebaseio.com",
+    projectId: "serveafse",
+    storageBucket: "serveafse.appspot.com",
+    messagingSenderId: "554532843158"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script type="text/javascript">
+  // FirebaseUI config.
+  var uiConfig = {
+    signInSuccessUrl: 'prof.html',
+    signInOptions: [
+      // Leave the lines as is for the providers you want to offer your users.
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+      //firebase.auth.GithubAuthProvider.PROVIDER_ID,
+      //firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      //firebase.auth.PhoneAuthProvider.PROVIDER_ID
+    ],
+    // Terms of service url.
+    tosUrl: '<your-tos-url>'
+  };
+
+  // Initialize the FirebaseUI Widget using Firebase.
+  var ui = new firebaseui.auth.AuthUI(firebase.auth());
+  // The start method will wait until the DOM is loaded.
+  ui.start('#firebaseui-auth-container', uiConfig);
+
+//   handleGoogleLogin = () => {
+//     window.open('about:blank', '_blank', 'width=515,height=680,top=260,left=702,location=1,resizable=1,statusbar=1,toolbar=0');
+//     loginWithGoogle()
+//         .catch(function (error) {
+//             alert(error);
+//         });
+// }
+</script>
+
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script> -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
+
+
+  <script src="index.js" type="text/javascript"></script>
+
+  
+</html>

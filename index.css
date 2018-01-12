@@ -1,0 +1,260 @@
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    opacity: 1;
+    /*background-color:#17202A; */
+}
+
+#welcomeText{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 1%;
+    text-align: center;
+    color: #5DADE2;
+    background-color: #EAECEE;
+    opacity: .8;
+}
+
+#welcomeText h1{
+    opacity: 1;
+    font-size: 4em;
+}
+
+/*type animation css */
+
+#welcomeText h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #5DADE2; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #5DADE2; }
+  }
+
+  #typedText{
+    margin-left: 15%;
+    margin-right: 5%;
+    margin-top: .5%;
+    text-align: center;
+    color: #5DADE2;
+    background-color: #EAECEE;
+    opacity: .9;
+    font-size: 1.5em;
+    max-width: 70%;
+    width: 70%;
+    float: left;
+
+  }
+
+  body{
+    font-family: Courier New, Courier, monospace;
+    max-width: 100%;
+  }
+ 
+.signUpOptions{
+  float: right;
+  margin-right: 15%;
+  margin-top: 5%;
+  height: 4em;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+
+#itemsDivHolder{
+  width: 60%;
+  max-width: 60%;
+  height: auto;
+  border: 2px solid transparent;
+  margin-top: 5%;
+  margin-left: 5%;
+  text-align: center;
+}
+
+.card{
+  /* width: 45%;
+  max-width: 45%; */
+  border: 2px solid transparent;
+  /* display: none; */
+  display: inline-block;
+  /* visibility: hidden; */
+  margin-bottom: 2%;
+  margin-right: 5%;
+  background-color: #EAECEE;
+  
+}
+
+.card:hover{
+  transition: .5s;
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.card a {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: #5DADE2;
+  border: 1px solid transparent;
+}
+
+.card h4{
+  font-weight: bold;
+  color: #5DADE2;
+}
+
+/* #firebaseui-auth-container{
+  /* display: none; */
+/* //} */
+
+
+  /*-------------------------------------------------------------------------------------------------*/
+
+  /* type multiple css texts
+  .css-typing h2 {
+    border-right: .15em solid orange;
+    font-fami//ly: "Courier";
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .css-typing h2:nth-child(1) {
+    width: 7.3em;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type 2s steps(40, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  .css-typing h2:nth-child(2) {
+    width: 11.5em;
+    opacity: 0;
+    -webkit-animation: type2 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  .css-typing h3:nth-child(3) {
+    width: 7.3em;
+    opacity: 0;
+    -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+    animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes type {
+    0% {
+      width: 0;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      border: none;
+    }
+  }
+  
+  @-webkit-keyframes type {
+    0% {
+      width: 0;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      border: none;
+    }
+  }
+  
+  @keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+  }
+  
+  @-webkit-keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+  }
+  
+  @keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  @-webkit-keyframes blink {
+    50% {
+      border-color: tranparent;
+    }
+  } */

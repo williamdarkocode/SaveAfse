@@ -1,0 +1,194 @@
+#itemContent{
+    width: 40%;
+    /* height: 400px; */
+    /* vertical-align: -webkit-baseline-middle; */
+}
+
+.modal-body form div{
+    display: inline-block;
+}
+
+body .modal-content {
+    /* new custom width */
+    width: 180%;
+    height: 700px;
+    /* must be half of the width, minus scrollbar on the left (30px) */
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.form-group{
+    margin-top: -18%;
+    width: 50%;
+    height: 400px;
+    vertical-align: -webkit-baseline-middle;
+    margin-right: 8.5%;
+}
+
+textarea{
+    margin-bottom: 2%;
+}
+
+.form-group input{
+    margin-bottom: 8%;
+}
+
+.modal{
+    padding-right: 40%;
+}
+
+#welcomeText{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 1%;
+    text-align: center;
+    color: #5DADE2;
+    background-color: #EAECEE;
+    opacity: .8;
+}
+
+#welcomeText h1{
+    opacity: 1;
+    font-size: 4em;
+}
+
+/*type animation css */
+
+#welcomeText h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #5DADE2; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #5DADE2; }
+  }
+
+  
+
+  /* #typedText{
+    margin-left: 15%;
+    margin-right: 5%;
+    margin-top: .5%;
+    text-align: center;
+    color: #5DADE2;
+    background-color: #EAECEE;
+    opacity: .9;
+    font-size: 1.5em;
+    max-width: 70%;
+    width: 70%;
+    float: left;
+
+  } */
+
+  body{
+    font-family: Courier New, Courier, monospace;
+    max-width: 100%;
+  }
+ 
+.signUpOptions{
+  float: right;
+  margin-right: 15%;
+  margin-top: 5%;
+  height: 4em;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+
+#itemsDivHolder{
+  width: 60%;
+  max-width: 60%;
+  height: auto;
+  border: 2px solid transparent;
+  margin-top: 2%;
+  margin-left: 20%;
+  text-align: center;
+}
+
+.card{
+  /* width: 45%;
+  max-width: 45%; */
+  border: 2px solid transparent;
+  display: inline-block;
+  margin-bottom: 2%;
+  margin-right: 5%;
+  background-color: #EAECEE;
+}
+
+.card:hover{
+  transition: 1s;
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.card a {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: #5DADE2;
+  border: 1px solid transparent;
+}
+
+.card h4{
+  font-weight: bold;
+  color: #5DADE2;
+  background-color: #EAECEE;
+  background-size: contain;
+  opacity: .8;
+}
+
+.card p{
+    background-color: #EAECEE;
+    background-size: contain;
+    opacity: .8;
+    font-weight: 500;
+}
+
+.card p:hover{
+    opacity: 1;
+    font-weight: 100;
+}
+
+#magneticBoardRuler{
+    background-image: url(media/materials/magRuler.jpg);
+    background-size: contain;
+}
+
+#deskOrnaments{
+    background-image: url(media/materials/ornamentsOverhead.jpg);
+    background-size: contain;
+}
+
+#socketCovers{
+    background-image: url(media/materials/orangeSocket.jpg);
+    background-size: contain;
+}
+
+#restroomPasses{
+    background-image: url(media/materials/restRoomPasses.png);
+    background-size: cover;
+}
+
+#markerHolders{
+    background-image: url(media/materials/markerHolder.jpg);
+    background-size: contain;
+}
+
+#binLids{
+    background-image: url(media/materials/binLid.jpg);
+    background-size: contain;
+}
+
+  
