@@ -83,33 +83,33 @@ var aText = new Array(
 
     var baseTime = 5000;
     setTimeout(function(){
-        $(".card:eq(0)").fadeIn(1000);
-        }, (baseTime+1000)*arb);
+        $(".card:eq(0)").fadeIn(500);
+        }, (baseTime+500)*arb);
     
     setTimeout(function(){
-        $(".card:eq(1)").fadeIn(1000);;
-        }, (baseTime+2000)*arb);
+        $(".card:eq(1)").fadeIn(500);;
+        }, (baseTime+1000)*arb);
 
   setTimeout(function(){
-        $(".card:eq(2)").fadeIn(1000);;
-        }, (baseTime+3000)*arb);
+        $(".card:eq(2)").fadeIn(500);;
+        }, (baseTime+1500)*arb);
 
         
     setTimeout(function(){
-        $(".card:eq(3)").fadeIn(1000);;
-        }, (baseTime+4000)*arb);
+        $(".card:eq(3)").fadeIn(500);;
+        }, (baseTime+2000)*arb);
 
     setTimeout(function(){
-        $(".card:eq(4)").fadeIn(1000);;
-        }, (baseTime+5000)*arb);
+        $(".card:eq(4)").fadeIn(500);;
+        }, (baseTime+2500)*arb);
 
     setTimeout(function(){
-        $(".card:eq(5)").fadeIn(1000);;
-        }, (baseTime+6000)*arb);
+        $(".card:eq(5)").fadeIn(500);;
+        }, (baseTime+3000)*arb);
 
     setTimeout(function(){
-        $("#firebaseui-auth-container").fadeIn(1000);;
-        }, (baseTime+7000)*arb);
+        $("#firebaseui-auth-container").fadeIn(500);;
+        }, (baseTime+3500)*arb);
 
     
 // }, 5000);
